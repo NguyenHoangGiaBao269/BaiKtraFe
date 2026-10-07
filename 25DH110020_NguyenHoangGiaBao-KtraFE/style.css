@@ -1,0 +1,491 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    font-size: 13px;
+}
+
+/* Header */
+.tiki-header {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+}
+
+.logo-search {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex: 1;
+}
+
+.search-bar {
+    display: flex;
+    flex: 1;
+    max-width: 600px;
+    border: 1px solid #003ea5;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.search-bar input {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    outline: none;
+    font-size: 13px;
+}
+
+.search-bar button {
+    background-color: #003ea5;
+    color: #fff;
+    border: none;
+    padding: 0 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.header-actions {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.header-actions a {
+    text-decoration: none;
+    color: #787878;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.header-actions a.cart {
+    color: #003ea5;
+    position: relative;
+    font-size: 18px;
+}
+
+.header-actions .badge {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: #ff424f;
+    color: white;
+    font-size: 10px;
+    padding: 2px 5px;
+    border-radius: 10px;
+}
+
+.sub-nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5px 15px 10px;
+    display: flex;
+    gap: 20px;
+    color: #555;
+    font-size: 12px;
+}
+
+.sub-nav span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.sub-nav i {
+    color: #00ab56;
+}
+
+/* Main Container */
+.main-container {
+    max-width: 1200px;
+    margin: 10px auto;
+    padding: 0 15px;
+}
+
+.breadcrumb {
+    color: #787878;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.product-detail-layout {
+    display: grid;
+    grid-template-columns: 380px 1fr 300px;
+    gap: 15px;
+}
+
+/* Left Column */
+.product-images {
+    background: #fff;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.main-image img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.thumbnail-list {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.thumb {
+    width: 60px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 2px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.thumb.active {
+    border-color: #003ea5;
+}
+
+.thumb img {
+    width: 100%;
+}
+
+.thumb span {
+    font-size: 8px;
+    display: block;
+    color: #555;
+    margin-top: 2px;
+}
+
+.view-more {
+    margin-top: 15px;
+    color: #003ea5;
+    cursor: pointer;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Middle Column */
+.product-info {
+    background: #fff;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.tags {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 8px;
+}
+
+.tag-topdeal {
+    background-color: #ff424f;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 2px;
+}
+
+.tag-return {
+    background-color: #f5f5f5;
+    color: #333;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 2px;
+    border: 1px solid #ddd;
+}
+
+.tag-auth {
+    background-color: #e5f5ed;
+    color: #00ab56;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 2px;
+}
+
+.product-title {
+    font-size: 20px;
+    font-weight: normal;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.rating-sold {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.stars {
+    color: #f5a623;
+}
+
+.review-count, .sold-count, .dot {
+    color: #787878;
+}
+
+.brand-info {
+    font-size: 13px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.brand-info a {
+    color: #003ea5;
+    text-decoration: none;
+}
+
+.product-price {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff424f;
+    background: #fafafa;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.option-section label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.option-btn {
+    border: 1px solid #003ea5;
+    background: #fff;
+    color: #003ea5;
+    padding: 6px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.shipping-box {
+    margin-top: 25px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.shipping-box h3, .services-box h3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.address-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.change-addr {
+    color: #003ea5;
+    text-decoration: none;
+}
+
+.shipping-method {
+    margin-bottom: 8px;
+}
+
+.shipping-method .now {
+    font-weight: bold;
+    color: #00ab56;
+}
+
+.badge-now {
+    background-color: #00ab56;
+    color: white;
+    font-size: 9px;
+    padding: 1px 4px;
+    border-radius: 2px;
+}
+
+.shipping-method .standard {
+    font-weight: bold;
+}
+
+.shipping-method .time {
+    color: #787878;
+    font-size: 12px;
+    margin-left: 15px;
+}
+
+.freeship-tag {
+    margin-top: 10px;
+    color: #00ab56;
+    font-size: 12px;
+}
+
+.services-box {
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.service-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.register-btn {
+    margin-left: auto;
+    color: #003ea5;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Right Column (Buy Box) */
+.product-buy-box {
+    background: #fff;
+    padding: 15px;
+    border-radius: 4px;
+    height: fit-content;
+}
+
+.seller-info {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 12px;
+    margin-bottom: 15px;
+}
+
+.seller-logo img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.seller-name strong {
+    display: block;
+}
+
+.seller-name .official {
+    color: #00ab56;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.seller-name .rating {
+    font-size: 11px;
+    color: #787878;
+    display: block;
+}
+
+.quantity-section label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.quantity-control {
+    display: inline-flex;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.quantity-control button {
+    background: #fff;
+    border: none;
+    padding: 5px 12px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.quantity-control input {
+    width: 40px;
+    text-align: center;
+    border: none;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    outline: none;
+}
+
+.temporary-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.temporary-price .price-val {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ff424f;
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn-buy-now {
+    background-color: #ff424f;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.btn-add-cart {
+    background-color: #fff;
+    color: #ff424f;
+    border: 1px solid #ff424f;
+    padding: 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-installment {
+    background-color: #fff;
+    color: #003ea5;
+    border: 1px solid #003ea5;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.promo-banner {
+    margin-top: 15px;
+}
+
+.promo-banner img {
+    width: 100%;
+    border-radius: 4px;
+}
